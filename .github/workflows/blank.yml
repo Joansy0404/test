@@ -1,6 +1,6 @@
 name: Download file
 
-on: "0 * * * *"
+on: [push]
 
 jobs:
   download:
