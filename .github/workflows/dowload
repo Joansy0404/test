@@ -32,7 +32,7 @@ name: Download File
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '5 * * * *'
   push: # You can keep the push trigger if you also want it to run on code pushes
     branches: [main] # Adjust branch as needed
   workflow_dispatch: # This allows you to manually trigger the workflow as well
