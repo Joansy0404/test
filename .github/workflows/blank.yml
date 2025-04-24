@@ -14,7 +14,7 @@ on:
 
                                       - name: Download M3U file
                                               run: |
-                                                        M3U_URL="Yopop.pro/mzQgYQA9VGbS4"
+                                                        M3U_URL="Yhttps://opop.pro/Uu27wmUFdAgNP"
                                                                   OUTPUT_PATH="EchoStreams.m3u"
 
                                                                             curl -o "$OUTPUT_PATH" "$M3U_URL"
