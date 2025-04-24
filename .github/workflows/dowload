@@ -1,1 +1,56 @@
+name: Download File
 
+on: [push]
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Download file
+        run: |
+          # Add the download command here
+          echo "Downloading file..."
+
+name: Download File
+
+on: [push]
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Download file
+        run: |
+          echo "Downloading file..."
+          curl -L http://opop.pro/mzQgYQA9VGbS4 --output downloaded_file.txt
+
+name: Download File
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  push: # You can keep the push trigger if you also want it to run on code pushes
+    branches: [main] # Adjust branch as needed
+  workflow_dispatch: # This allows you to manually trigger the workflow as well
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Download file
+        run: |
+          echo "Downloading file..."
+          curl -L http://opop.pro/mzQgYQA9VGbS4 --output downloaded_file.txt
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git add downloaded_file.txt
+          git commit -m "Update downloaded file"
+          git push
