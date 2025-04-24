@@ -13,7 +13,7 @@ jobs:
           # Add the download command here
           echo "Downloading file..."
 
-name: Download File
+name: Download file
 
 on: [push]
 
